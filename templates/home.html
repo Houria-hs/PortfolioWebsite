@@ -1,0 +1,269 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- header section -->
+<section class="home">
+    <div class="container homeConatiner" style="height: 100vh;">
+        <div class="overlay"></div>
+        <div class="card homeCard " style="height: 80%; color: white;">
+                <img src="{% static '../static/images/logo.png' %}" class="card-img-top" alt="logo">
+                <div class="card-body text-center">
+                    <h1 class="card-title">WE GROW WITH <span>ANIMATION</span></h1>
+                    <p class="card-text muted">Video editing an motion graphic services</p>
+                    <a id="Mywork" href="#portfolio" class="btn m-3"> My Work</a>
+                    <p class="muted">"You never get a second chance to make a first impression."</p>
+                    <p class="muted">Will Rogers</p>
+                    <a id="DownBtn" href="#services" class="btn"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!-- services section -->
+<section id="services" class="services services-section">
+    <div class="container servicesContainer ">
+        <div class="row">
+            <div class="col text-center">
+                <h2 >Our Services</h2>
+                <p class="mt-2 muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam rem aperiam, 
+                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+        </div>
+        <div id="servicesGridRow" class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3 text-center m-2">
+                <div  class="col-6 col-md-4">
+                    <div class="p-3"><h5>Podcast shorts</h5></div>
+                </div>
+                <div  class="col-6 col-md-4">
+                    <div class="p-3"><h5>Social media ads</h5></div>
+                </div>
+                <div  class="col-6 col-md-4">
+                    <div class="p-3"><h5>Motion graphics</h5></div>
+                </div>
+                <div  class="col-6 col-md-4">
+                    <div class="p-3"><h5>Video explainers</h5></div>
+                </div>
+                <div  class="col-6 col-md-4">
+                    <div class="p-3"><h5>Product demos</h5></div>
+                </div>
+                <div  class="col-6 col-md-4">
+                    <div class="p-3"><h5>Website videos</h5></div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!-- space -->
+<section class="space">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center">
+        <p>|</p>
+        <p>|</p>
+        <p>|</p>
+    </div>
+</section>
+
+<!-- about informations -->
+<section class="AboutInfo">
+    <div class="overlay"></div>
+    <div class="container infoContainer py-5">
+        <!-- Statistics Row -->
+        <div class="row text-center d-flex justify-content-center align-items-center mb-5 statsRow">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 infoCols">
+                <h3>50+</h3>
+                <p>Clients</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 infoCols">
+                <h3>68</h3>
+                <p>Projects</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 infoCols">
+                <h3>06</h3>
+                <p>Years Experience</p>
+            </div>
+        </div>
+        <!-- Logos Row -->
+        <div class="row text-center d-flex justify-content-center align-items-center boldText logosRow">
+            <div class="col-3 col-sm-2 col-md-1 mb-2">Flowbase</div>
+            <div class="col-3 col-sm-2 col-md-1 mb-2">Pr Hunt</div>
+            <div class="col-3 col-sm-2 col-md-1 mb-2">WebFlow</div>
+            <div class="col-3 col-sm-2 col-md-1 mb-2">Stripe</div>
+            <div class="col-3 col-sm-2 col-md-1 mb-2">Adobe</div>
+            <div class="col-3 col-sm-2 col-md-1 mb-2">Tilebit</div>
+            <div class="col-3 col-sm-2 col-md-1 mb-2">Framer</div>
+            <div class="col-3 col-sm-2 col-md-1 mb-2">Flowbase</div>
+        </div>
+    </div>
+</section>
+
+<!-- space -->
+<section class="space">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center">
+        <p>|</p>
+        <p>|</p>
+        <p>|</p>
+    </div>
+</section>
+
+<!-- portfolio sections -->
+<section id="portfolio" class="portfolio-section">
+    <h2>Our Portfolio</h2>
+    <p>Explore our work for different brands. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis.</p>
+
+    <!-- Portfolio Cards -->
+    <div class="container">
+        <div class="row justify-content-center">
+        {% if projects %}
+        {% for video in projects %}
+        <div class="col-md-4 mb-4">
+            <div class="portfolio-card">
+                <div class="card-body">
+                    <iframe 
+    width="100%" 
+    height="100%" 
+    src="{{ video.video_url }}" 
+    frameborder="0" 
+    allow="autoplay; encrypted-media" 
+    allowfullscreen>
+</iframe>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</section>
+
+<!-- testimonials section -->
+<section class="testimonials-section">
+    <div class="container text-center ">
+        <h2 class="fw-bold">Testimonials</h2>
+        <p class="muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
+        <!-- cards -->
+        <div class="row justify-content-center my-4">
+            <!-- Testimonial Card 1 -->
+            <div class="col-md-5 col-lg-4 m-3 p-4 border rounded-3 bg-dark text-start shadow testimonial-card">
+                <h5 class="fw-bold">David</h5>
+                
+                <p class="muted">
+                    excellent work, I've been very happy to work with him from the start. He produces good videos, and is always up to date.
+                </p>
+                <div class="icons_div d-flex flex-row mt-3">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <!-- Testimonial Card 2 -->
+            <div class="col-md-5 col-lg-4 m-3 p-4 border rounded-3 bg-dark text-start shadow testimonial-card">
+                <h5 class="fw-bold">Ayman arab</h5>
+                <p class="muted">I’ve worked with vision pulse, and they have feet quick turnaround times, minimal revisions, can’t recommend them more!</p>
+                <div class="icons_div d-flex flex-row mt-3">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Featured Content -->
+        <div>
+            <h6 class="fw-bold">Frequently featured content from:</h6>
+            <div class="d-flex justify-content-center flex-wrap mt-3">
+                <a class="mx-2 my-2" href="">
+                    <h4>awwwards.</h4>
+                </a>
+                <a class="mx-2 my-2" href="">
+                    <h4>Lapa</h4>
+                </a>
+                <a class="mx-2 my-2" href="">
+                    <h4>Dribble.</h4>
+                </a>
+                <a class="mx-2 my-2" href="">
+                    <h4>Product Hunt</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- space -->
+<section class="space">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center">
+        <p>|</p>
+        <p>|</p>
+        <p>|</p>
+    </div>
+</section>
+<!-- contact section -->
+<section id="contact" class="Contact">
+    <div class="form-container">
+        <h2>Drop a Line</h2>
+        <form>
+            <div class="row">
+            <!-- Name Input -->
+                <div class="col m-3">
+                    <input type="text" class="form-control" placeholder="Name" required>
+                </div>
+                <!-- Email Input -->
+                <div class="col m-3">
+                    <input type="email" class="form-control" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="row">
+            <!-- Phone Input -->
+                <div class="col m-3">
+                    <input type="number" class="form-control" placeholder="Phone" required>
+                </div>
+                <!-- Budget Input -->
+                <div class="col m-3">
+                <select class="form-select" required>
+                    <option value="" disabled selected>Budget</option>
+                    <option value="low">$100 - $500</option>
+                    <option value="medium">$500 - $1000</option>
+                    <option value="high">$1000+</option>
+                </select>
+                </div>
+            </div>
+            <!-- Message Textarea -->
+                <div class="col m-3">
+                    <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+                </div>
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-submit m-3">Submit</button>
+        </form>
+    </div>
+</section>
+<!-- footer -->
+<section class="footer">
+    <div class="container footer-content">
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h4>Contact Us</h4>
+            <p>Let's make something new, different and more.</p>
+            <p>Call Me<br>+000 000 000 000</p>
+            <p>Email<br>contact@visionpulse.com</p>
+        </div>
+    
+        <!-- Social Media Links -->
+        <div class="social-icons">
+            <p class="mb-2">Find Me on</p>
+            <a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+            <a href="#" aria-label="Dribbble"><i class="fa-solid fa-basketball"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        </div>
+        <!-- Divider Line -->
+        <div class="footer-divider"></div>
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>©2024 Visionpulse. All rights reserved.</p>
+        </div>
+</section>
+
+{% endblock %}
+
