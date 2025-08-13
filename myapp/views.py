@@ -36,5 +36,5 @@ def contact_view(request):
         )
 
         messages.success(request, "Your message has been sent successfully!")
-        return redirect('contact')  
+        return redirect('home')  
     return render(request, "home.html")
