@@ -25,7 +25,7 @@
                             <a class="nav-link m-1 " href="#contact">Contact us</a>
                         </div>
                     </div>
-                    <a id="hireme"  class="btn hireme m-1"> Hire Me</a>
+                    <!-- <a id="hireme"  class="btn hireme m-1"> Hire Me</a> -->
                 </div>
             </nav>
             <div class="card homeCard " style="height: 80%; color: white;">
@@ -213,25 +213,26 @@
     <section id="contact" class="Contact">
         <div class="form-container">
             <h2 class="hidden slide-right">Drop a Line</h2>
-            <form class="hidden slide-left">
+            <form  method="POST" action="{% url 'contact' %}" class="hidden slide-left">
+                {% csrf_token %}
                 <div class="row g-3">
                     <!-- Name Input -->
                     <div class="col-12 col-md-6 mb-2 ">
-                        <input type="text" class="form-control" placeholder="Name" required>
+                        <input name="name_inp" type="text" class="form-control" placeholder="Name" required>
                     </div>
                     <!-- Email Input -->
                     <div class="col-12 col-md-6 mb-2 ">
-                        <input type="email" class="form-control" placeholder="Email" required>
+                        <input name="email_inp" type="email" class="form-control" placeholder="Email" required>
                     </div>
                 </div>
                 <div class="row g-3">
                     <!-- Phone Input -->
                     <div class="col-12 col-md-6 mb-2 ">
-                        <input type="number" class="form-control" placeholder="Phone" required>
+                        <input name="number_inp" type="number" class="form-control" placeholder="Phone" required>
                     </div>
                     <!-- Budget Input -->
                     <div class="col-12 col-md-6 mb-2">
-                        <select class="form-select" required>
+                        <select name="budget_inp" class="form-select" required>
                             <option value="" disabled selected>Budget</option>
                             <option value="low">$100 - $500</option>
                             <option value="medium">$500 - $1000</option>
@@ -242,7 +243,7 @@
                 <!-- Message Textarea -->
                 <div class="row g-3">
                     <div class="col-12">
-                        <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+                        <textarea name="message_inp" class="form-control" rows="4" placeholder="Message" required></textarea>
                     </div>
                 </div>
                 <!-- Submit Button -->
@@ -261,7 +262,7 @@
             <div class="contact-info">
                 <h4 class="animated">Contact Us</h4>
                 <p>Let's make something new, different and more.</p>
-                <p>Call Me<br>+000 000 000 000</p>
+                <p>Call Me<br>+213 790 493 217</p>
                 <p>Email<br>contact@visionpulse.com</p>
             </div>
         
