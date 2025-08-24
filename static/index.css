@@ -9,6 +9,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  background-color: #000000 !important;
 }
 
 .hidden{

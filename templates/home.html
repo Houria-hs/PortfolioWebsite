@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 {% load static %}
 {% block content%}
@@ -5,193 +6,259 @@
 <div id="fullpage">
     <!-- Hero section -->
     <section class="hero">
-        <div class="container-fluid homeConatiner min-vh-100 d-flex flex-column">
+        <div class="container homeConatiner" style="height: 100vh;">
             <div class="overlay"></div>
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg ">
                 <div class="container-fluid">
-                    <a id="ContactBtn" href="#contact" class="btn">Contact</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" 
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav w-100 d-flex justify-content-center align-items-center hidden">
+                    
+                    <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                        <div 
+                            class="navbar-nav w-100 d-flex justify-content-center
+                            align-items-center hidden">
                             <a id="Active" class="nav-link active" aria-current="page" href="#">Home</a>
-                            <a class="nav-link m-1" href="#services">Services</a>
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
-                            <a class="nav-link" href="#feedback">Feedback</a>
-                            <a class="nav-link m-1" href="#contact">Contact Us</a>
+                            <a class="nav-link m-1 " href="#services">Services</a>
+                            <a class="nav-link  " href="#portfolio">Portfolio</a>
+                            <a class="nav-link  " href="#feedback">Feedback</a>
+                            <a class="nav-link m-1 " href="#contact">Contact us</a>
                         </div>
                     </div>
-                </div>
+                    <a id="ContactBtn" href="#contact" class="btn"> Contact </a>                </div>
             </nav>
-
-            <!-- Hero Card -->
-            <div class="card homeCard text-center flex-grow-1 d-flex align-items-center justify-content-center text-white">
-                <div class="card-body">
-                    <img src="{% static 'images/logo.png' %}" class="img-fluid mb-4" alt="logo">
-                    <h1 class="card-title hidden">WE GROW WITH <span class="text-flicker-in-glow">ANIMATION</span></h1>
-                    <p class="card-text muted hidden">Video editing and motion graphic services</p>
-                    <a id="Mywork" href="#portfolio" class="btn m-3">Our Work</a>
-                    <blockquote class="muted hidden">"You never get a second chance to make a first impression."</blockquote>
-                    <p class="muted hidden">– Will Rogers</p>
-                    <a id="DownBtn" href="#services" class="btn"><i class="fa-solid fa-arrow-down"></i></a>
-                </div>
+            <div class="card homeCard " style="height: 80%; color: white;">
+                    <img src="{% static '../static/images/logo.png' %}" class="card-img-top" alt="logo">
+                    <div class="card-body text-center">
+                        <h1 class="card-title hidden">WE GROW WITH <span class="text-flicker-in-glow">ANIMATION</span></h1>
+                        <p class="card-text muted hidden ">Video editing an motion graphic services</p>
+                        <a id="Mywork" href="#portfolio" class="btn m-3"> Our Work</a>
+                        <p class="muted hidden ">"You never get a second chance to make a first impression."</p>
+                        <p class="muted hidden ">Will Rogers</p>
+                        <a id="DownBtn" href="#services" class="btn"><i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
             </div>
         </div>
     </section>
     
-    <!-- Services Section -->
-    <section id="services" class="services py-5">
-        <div class="container">
-            <div class="row text-center mb-4">
-                <div class="col">
-                    <h2 class="hidden slide-up">Our Services</h2>
-                    <p class="mt-2 muted hidden slide-up">Sed ut perspiciatis unde omnis iste natus error sit voluptatem...</p>
+    <!-- services section -->
+    <section id="services" class="services services-section ">
+        <div class="container servicesContainer ">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class=" hidden slide-up" >Our Services</h2>
+                    <p class="mt-2 muted hidden slide-up ">Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam rem aperiam, 
+                        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                 </div>
             </div>
-            <div id="servicesGridRow" class="row row-cols-2 row-cols-md-3 g-3 text-center">
-                <div class="col"><div class="p-3 hidden slide-down"><h5>Podcast shorts</h5></div></div>
-                <div class="col"><div class="p-3 hidden slide-down"><h5>Social media ads</h5></div></div>
-                <div class="col"><div class="p-3 hidden slide-down"><h5>Motion graphics</h5></div></div>
-                <div class="col"><div class="p-3 hidden slide-down"><h5>Video explainers</h5></div></div>
-                <div class="col"><div class="p-3 hidden slide-down"><h5>Product demos</h5></div></div>
-                <div class="col"><div class="p-3 hidden slide-down"><h5>Website videos</h5></div></div>
+            <div id="servicesGridRow" class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3 text-center m-2">
+                    <div  class="col-6 col-md-4">
+                        <div class="p-3 hidden slide-down "><h5>Podcast shorts</h5></div>
+                    </div>
+                    <div  class="col-6 col-md-4">
+                        <div class="p-3 hidden slide-down "><h5>Social media ads</h5></div>
+                    </div>
+                    <div  class="col-6 col-md-4">
+                        <div class="p-3 hidden slide-down "><h5>Motion graphics</h5></div>
+                    </div>
+                    <div  class="col-6 col-md-4">
+                        <div class="p-3 hidden slide-down "><h5>Video explainers</h5></div>
+                    </div>
+                    <div  class="col-6 col-md-4">
+                        <div class="p-3 hidden slide-down "><h5>Product demos</h5></div>
+                    </div>
+                    <div  class="col-6 col-md-4">
+                        <div class="p-3 hidden slide-down "><h5>Website videos</h5></div>
+                    </div>
             </div>
         </div>
     </section>
     
-    <!-- About Info -->
-    <section class="AboutInfo py-5 text-white" style="background-image: url('/static/images/long-with3.jpg'); background-size: cover; background-position: center;">
+    <!-- about informations -->
+    <section class="AboutInfo " 
+    style="background-image: url('/static/images/long-with3.jpg');">
         <div class="overlay"></div>
-        <div class="container">
-            <!-- Stats Row -->
-            <div class="row text-center justify-content-center mb-5">
-                <div class="col-6 col-md-4 col-lg-3 mb-3"><h3>50+</h3><p>Clients</p></div>
-                <div class="col-6 col-md-4 col-lg-3 mb-3"><h3>68</h3><p>Projects</p></div>
-                <div class="col-6 col-md-4 col-lg-3 mb-3"><h3>06</h3><p>Years Experience</p></div>
+        <div class="container infoContainer py-5">
+            <!-- Statistics Row -->
+            <div class="row hidden slide-down  text-center d-flex justify-content-center align-items-center mb-5 statsRow">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 infoCols ">
+                    <h3>50+</h3>
+                    <p>Clients</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 infoCols ">
+                    <h3>68</h3>
+                    <p>Projects</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 infoCols ">
+                    <h3>06</h3>
+                    <p>Years Experience</p>
+                </div>
             </div>
             <!-- Logos Row -->
-            <div class="row text-center justify-content-center g-3">
-                <div class="col-4 col-md-2">Flowbase</div>
-                <div class="col-4 col-md-2">Pr Hunt</div>
-                <div class="col-4 col-md-2">WebFlow</div>
-                <div class="col-4 col-md-2">Stripe</div>
-                <div class="col-4 col-md-2">Adobe</div>
-                <div class="col-4 col-md-2">Tilebit</div>
-                <div class="col-4 col-md-2">Framer</div>
-                <div class="col-4 col-md-2">Flowbase</div>
+            <div class="row text-center d-flex justify-content-center align-items-center boldText logosRow">
+                <div class="col-3 col-sm-2 col-md-1 mb-2 hidden slide-left ">Flowbase</div>
+                <div class="col-3 col-sm-2 col-md-1 mb-2 hidden slide-left ">Pr Hunt</div>
+                <div class="col-3 col-sm-2 col-md-1 mb-2 hidden slide-left ">WebFlow</div>
+                <div class="col-3 col-sm-2 col-md-1 mb-2 hidden slide-left ">Stripe</div>
+                <div class="col-3 col-sm-2 col-md-1 mb-2 hidden slide-left ">Adobe</div>
+                <div class="col-3 col-sm-2 col-md-1 mb-2 hidden slide-left ">Tilebit</div>
+                <div class="col-3 col-sm-2 col-md-1 mb-2 hidden slide-left ">Framer</div>
+                <div class="col-3 col-sm-2 col-md-1 mb-2 hidden slide-left ">Flowbase</div>
             </div>
         </div>
     </section>
     
-    <!-- Portfolio -->
-    <section id="portfolio" class="py-5">
+    <!-- portfolio sections -->
+    <section id="portfolio" class="portfolio-section py-5 ">
+        <h2 class="hidden slide-left" >Our Portfolio</h2>
+        <p class="hidden slide-left">Explore our work for different brands. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis.</p>
         <div class="container">
-            <h2 class="hidden slide-left text-center">Our Portfolio</h2>
-            <p class="hidden slide-left text-center">Explore our work for different brands...</p>
             <div class="row justify-content-center">
                 {% if projects %}
                 {% for video in projects %}
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card shadow-sm h-100">
-                        <div class="ratio ratio-16x9">
-                            <iframe src="{{ video.video_url }}" class="rounded-4" allowfullscreen></iframe>
-                        </div>
+                <div class="col-md-4 mb-4 hidden slide-right portfolio-card rounded-4">
+                    <div class="card-body">
+                        <iframe class="rounded-4"
+                                width="100%" 
+                                height="100%" 
+                                src="{{ video.video_url }}" 
+                                frameborder="0" 
+                                allow="autoplay; encrypted-media" 
+                                allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
                 {% endfor %}
-                {% endif %}
-            </div>
+            {% endif %}
         </div>
     </section>
     
-    <!-- Testimonials -->
-    <section id="feedback" class="py-5 bg-light">
-        <div class="container text-center">
+    <!-- testimonials section -->
+    <section id="feedback" class="testimonials-section py-5">
+        <div class="container text-center ">
             <h2 class="fw-bold hidden slide-right">Testimonials</h2>
-            <p class="muted hidden slide-right">What our clients say about us.</p>
-            <div class="row justify-content-center mt-4">
+            <p class="muted hidden slide-right">Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
+            <!-- cards -->
+            <div class="row justify-content-center my-4">
                 {% if testimonials %}
                 {% for testimonial in testimonials %}
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="p-4 border rounded-3 bg-dark text-white shadow text-start">
-                        <h5 class="fw-bold">{{ testimonial.name }}</h5>
-                        <p class="muted">{{ testimonial.feedback_text }}</p>
-                        <div class="icons_div mt-3">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
+                <div class="col-md-5 col-lg-4 m-3 p-4  border rounded-3 bg-dark hidden slide-left text-start shadow testimonial-card">
+                    <h5 class="fw-bold">{{ testimonial.name }}</h5>
+                    
+                    <p class="muted">
+                        {{ testimonial.feedback_text }}
+                    </p>
+                    <div class="icons_div d-flex flex-row mt-3">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
                 </div>
                 {% endfor %}
                 {% endif %}
             </div>
+            
+            <!-- Featured Content -->
+            <div class="mt-5 py-5">
+                <h6 class="fw-bold hidden slide-up ">Frequently featured content from:</h6>
+                <div class="d-flex hidden slide-up  justify-content-center flex-wrap mt-3">
+                    <a class="mx-2 my-2 " href="">
+                        <h4>awwwards.</h4>
+                    </a>
+                    <a class="mx-2 my-2 " href="">
+                        <h4>Lapa</h4>
+                    </a>
+                    <a class="mx-2 my-2 " href="">
+                        <h4>Dribble.</h4>
+                    </a>
+                    <a class="mx-2 my-2 " href="">
+                        <h4>Product Hunt</h4>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
+
     
-    <!-- Contact -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center hidden slide-right mb-4">Drop a Line</h2>
-            <form method="POST" action="{% url 'contact' %}" class="row g-3">
+    <!-- contact section -->
+    <section id="contact" class="Contact py-5">
+        <div class="form-container">
+            <h2 class="hidden slide-right">Drop a Line</h2>
+            <form  method="POST" action="{% url 'contact' %}" class="hidden slide-left">
                 {% csrf_token %}
-                <div class="col-12 col-md-6">
-                    <input name="name_inp" type="text" class="form-control" placeholder="Name" required>
+                <div class="row g-3">
+                    <!-- Name Input -->
+                    <div class="col-12 col-md-6 mb-2 ">
+                        <input name="name_inp" type="text" class="form-control" placeholder="Name" required>
+                    </div>
+                    <!-- Email Input -->
+                    <div class="col-12 col-md-6 mb-2 ">
+                        <input name="email_inp" type="email" class="form-control" placeholder="Email" required>
+                    </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <input name="email_inp" type="email" class="form-control" placeholder="Email" required>
+                <div class="row g-3">
+                    <!-- Phone Input -->
+                    <div class="col-12 col-md-6 mb-2 ">
+                        <input name="number_inp" type="number" class="form-control" placeholder="Phone" required>
+                    </div>
+                    <!-- Budget Input -->
+                    <div class="col-12 col-md-6 mb-2">
+                        <select name="budget_inp" class="form-select" required>
+                            <option value="" disabled selected>Budget</option>
+                            <option value="low">$100 - $500</option>
+                            <option value="medium">$500 - $1000</option>
+                            <option value="high">$1000+</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <input name="number_inp" type="tel" class="form-control" placeholder="Phone" required>
+                <!-- Message Textarea -->
+                <div class="row g-3">
+                    <div class="col-12">
+                        <textarea name="message_inp" class="form-control" rows="4" placeholder="Message" required></textarea>
+                    </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <select name="budget_inp" class="form-select" required>
-                        <option value="" disabled selected>Budget</option>
-                        <option value="low">$100 - $500</option>
-                        <option value="medium">$500 - $1000</option>
-                        <option value="high">$1000+</option>
-                    </select>
-                </div>
-                <div class="col-12">
-                    <textarea name="message_inp" class="form-control" rows="4" placeholder="Message" required></textarea>
-                </div>
-                <div class="col-12 text-center">
+                <!-- Submit Button -->
+                <div class="text-center">
                     <button type="submit" class="btn btn-submit m-3">Submit</button>
                 </div>
             </form>
         </div>
     </section>
     
-    <!-- Footer -->
-    <footer class="footer py-4 bg-dark text-white">
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <div class="contact-info mb-3 mb-md-0">
-                <h4>Contact Us</h4>
+    
+    <!-- footer -->
+    <section class="footer">
+        <div class="container footer-content">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h4 class="animated">Contact Us</h4>
                 <p>Let's make something new, different and more.</p>
-                <p>📞 +213 790 493 217 | ✉️ contact@visionpulse.com</p>
+                <p>Call Me<br>+213 790 493 217</p>
+                <p>Email<br>contact@visionpulse.com</p>
             </div>
+        
+            <!-- Social Media Links -->
             <div class="social-icons">
                 <p class="mb-2">Find Me on</p>
-                <a href="#" class="me-2"><i class="fa-brands fa-behance"></i></a>
-                <a href="#" class="me-2"><i class="fa-solid fa-basketball"></i></a>
-                <a href="#" class="me-2"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                <a href="#" aria-label="Dribbble"><i class="fa-solid fa-basketball"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-        </div>
-        <div class="text-center mt-3">
-            <p class="mb-0">©2024 Visionpulse. All rights reserved.</p>
-            <span>Crafted by Houria Hasbellaoui</span>
-        </div>
-    </footer>
+            </div>
+            <!-- Divider Line -->
+            <div class="footer-divider"></div>
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>©2024 Visionpulse. All rights reserved.</p>
+                <span class="mt-2">Crafted by Houria Hasbellaoui</span>
+            </div>
+    </section>
+
 </div>
 
-{% endblock %}
-
+{% endblock %} 
 
 
