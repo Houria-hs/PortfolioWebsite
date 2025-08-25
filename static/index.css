@@ -10,7 +10,7 @@ body {
   padding-top: 70px;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: rgba(31, 30, 30, 0.6) !important;
+  background-color: #000000 !important ;
 }
 
 .hidden{
@@ -327,7 +327,7 @@ span{
 
 .hero{
     position: relative;
-    background-color: black;
+    background-color: rgba(31, 30, 30, 0.6);
     background-image: url('/static/images/background-removebg-preview.png');
     background-size: 83%;
     background-repeat: no-repeat;
