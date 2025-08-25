@@ -9,7 +9,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: rgba(31, 30, 30, 0.6) !important;
+  background-color: black !important;
 }
 
 .hidden{
