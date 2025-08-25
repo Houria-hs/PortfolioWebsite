@@ -16,7 +16,7 @@
                     
                     <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                         <div 
-                            class="navbar-nav w-100 d-flex justify-content-center
+                            class="navbar-nav w-100 d-flex
                             align-items-center hidden">
                             <a id="Active" class="nav-link active" aria-current="page" href="#">Home</a>
                             <a class="nav-link m-1 " href="#services">Services</a>
@@ -133,34 +133,31 @@
         </div>
     </section>
     
-    <!-- testimonials section -->
-    <section id="feedback" class="testimonials-section py-5">
-        <div class="container text-center ">
+    <section id="feedback" class="py-5 bg-black">
+        <div class="container text-center">
             <h2 class="fw-bold hidden slide-right">Testimonials</h2>
-            <p class="muted hidden slide-right">Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et.</p>
-            <!-- cards -->
-            <div class="row justify-content-center my-4">
-                {% if testimonials %}
-                {% for testimonial in testimonials %}
-                <div class="col-md-5 col-lg-4 m-3 p-4  border rounded-3 bg-dark hidden slide-left text-start shadow testimonial-card">
-                    <h5 class="fw-bold">{{ testimonial.name }}</h5>
-                    
-                    <p class="muted">
-                        {{ testimonial.feedback_text }}
-                    </p>
-                    <div class="icons_div d-flex flex-row mt-3">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                </div>
-                {% endfor %}
-                {% endif %}
-            </div>
-            
-            <!-- Featured Content -->
+            <p class="muted hidden slide-right">What our clients say about us.</p> 
+            <div class="row justify-content-center mt-4"> 
+                {% if testimonials %} 
+                {% for testimonial in testimonials %} 
+                <div class="col-12 col-md-6 col-lg-4 mb-4"> 
+                    <div class="p-4 border rounded-3 bg-dark text-white shadow text-start"> 
+                        <h5 class="fw-bold">{{ testimonial.name }}</h5> 
+                        <p class="muted">{{ testimonial.feedback_text }}</p> 
+                        <div class="icons_div mt-3"> <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> 
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> 
+                        </div> 
+                    </div> 
+                </div> 
+                        {% endfor %} 
+                        {% endif %} 
+                    </div> 
+                </div> 
+            </section>
+
+    <section>
+        <!-- Featured Content -->
             <div class="mt-5 py-5">
                 <h6 class="fw-bold hidden slide-up ">Frequently featured content from:</h6>
                 <div class="d-flex hidden slide-up  justify-content-center flex-wrap mt-3">
@@ -178,7 +175,6 @@
                     </a>
                 </div>
             </div>
-        </div>
     </section>
 
     
