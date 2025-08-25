@@ -427,12 +427,6 @@ span{
     padding: 10px 0;
 }
 
-.space{
-    background-color: #111111;
-}
-.space .container p{
-    color: #98abee;
-}
 
 /* about styling */
 .AboutInfo {
@@ -513,6 +507,11 @@ span{
     max-width: 50%;
     margin: auto;
     padding: 2rem;
+}
+@media (max-width: 768px){
+  .form-container{
+    max-width: 70%;
+  }
 }
 .form-control, .form-select{
     background-color: #000000 !important;
@@ -641,7 +640,6 @@ h2{
 .portfolio-card:nth-child(4){
   transition-delay: 3000ms;
 }
-
 .portfolio-card .card-body {
     display: flex;
     flex-direction: column;
@@ -660,8 +658,6 @@ h2{
 
 
 
-
-  /* testimponials */
 h2 {
     color: #ffffff;
     margin-top: 20px;
