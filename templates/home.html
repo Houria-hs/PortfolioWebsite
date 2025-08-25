@@ -28,7 +28,7 @@
                     <a id="ContactBtn" href="#contact" class="btn"> Contact </a>                
                 </div>
             </nav>
-            <div class="card homeCard py-7" style="height: 80%; color: white;">
+            <div class="card homeCard py-7 mt-3" style="height: 80%; color: white;">
                     <img src="{% static '../static/images/logo.png' %}" class="card-img-top" alt="logo">
                     <div class="card-body text-center">
                         <h1 class="card-title hidden">WE GROW WITH <span class="text-flicker-in-glow">ANIMATION</span></h1>
@@ -43,13 +43,12 @@
     </section>
     
     <!-- services section -->
-    <section id="services" class="services services-section py-6 ">
+    <section id="services" class="services services-section py-6 mt-3">
         <div class="container servicesContainer ">
             <div class="row">
                 <div class="col text-center">
                     <h2 class=" hidden slide-up" >Our Services</h2>
-                    <p class="mt-2 muted hidden slide-up ">Sed ut perspiciatis unde omnis iste natus error sit voluptatem totam rem aperiam, 
-                        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p class="mt-2 muted hidden slide-up ">We provide variety of services.</p>
                 </div>
             </div>
             <div id="servicesGridRow" class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3 text-center m-2">
@@ -110,7 +109,7 @@
     </section>
     
     <!-- portfolio sections -->
-    <section id="portfolio" class="portfolio-section py-7 ">
+    <section id="portfolio" class="portfolio-section py-7 mt-3">
         <h2 class="hidden slide-left" >Our Portfolio</h2>
         <p class="hidden slide-left">Explore our work for different brands. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis.</p>
         <div class="container">
@@ -134,7 +133,7 @@
         </div>
     </section>
     
-    <section id="feedback" class="py-7 bg-black">
+    <section id="feedback" class="py-7 mt-3 bg-black">
         <div class="container text-center">
             <h2 class="fw-bold hidden text-white slide-right">Testimonials</h2>
             <p class="muted hidden slide-right">What our clients say about us.</p> 
@@ -184,9 +183,9 @@
 
     
     <!-- contact section -->
-    <section id="contact" class="Contact py-6">
+    <section id="contact" class="Contact py-6 ">
         <div class="form-container">
-            <h2 class="hidden slide-right">Drop a Line</h2>
+            <h2 class="hidden slide-right mb-2">Drop a Line</h2>
             <form  method="POST" action="{% url 'contact' %}" class="hidden slide-left">
                 {% csrf_token %}
                 <div class="row g-3">
